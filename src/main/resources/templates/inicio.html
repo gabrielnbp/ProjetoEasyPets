@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/media.css">
+<title>EasyPets - Início</title>
+</head>
+<body>
+	<header>
+		<div id="title">
+			<h1>Health</h1>
+			<h1>EasyPets</h1>
+		</div>
+
+
+		<ul>
+			<a href="/"><li>Início</li></a>
+			<a href="/pets/servicos"><li>Serviços</li></a>
+			<a href="/pets/sobre"><li>Sobre</li></a>
+			<a href="/pets/contatar"><li>Contato</li></a>
+			<a href="/pets/logar" id="inscreva-se-btn"><li>Já tem uma
+					conta?</li></a>
+		</ul>
+	</header>
+
+	<main>
+		<aside>
+			<h2>
+				<span>Inscreva-se agora</span>
+			</h2>
+			<h2>no Nosso Projeto</h2>
+			<p>A ideia principal é reduzir cada vez mais o número de animais
+				abandonados em condições precárias e ajudar os pets que adquiriram
+				doenças devido suas condições de vida, que passam fome e sede.</p>
+
+			<form>
+				<input type="text" placeholder="Nome"> <input type="email"
+					placeholder="E-mail"> <input type="submit" id="Enviar"
+					value="Enviar">
+			</form>
+
+
+		</aside>
+
+		<article>
+			<img src="../components/images/adopt.png" alt="Imagem do Inicio">
+		</article>
+
+	</main>
+
+	<script>
+		const btnEnviar = document.querySelector('#Enviar');
+
+		btnEnviar.addEventListener('click', function() {
+			alert('E-mail encaminhado com sucesso!');
+		});
+	</script>
+
+</body>
+</html>

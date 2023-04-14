@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sobre.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>EasyPets - Adote seu Animal</title>
+</head>
+<body>
+    <section class="sobre">
+        <div class="imagem">
+            <img src="../imagens/cachorro01.jpg">
+            <div class="textoSobre">
+                <h1>Rafael Falabella</h1>
+                <h5><span>5 anos</span></h5>
+                <form>
+                	<input type="text" placeholder="Nome">
+                	<input type="email" placeholder="E-mail">
+                	<input type="text" placeholder="Endereço">
+                	<input type="text" placeholder="Telefone">
+            	</form>
+            	<a href="/"><input type="submit" id="Adotar" value="Adotar"></a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+		const btnEnviar = document.querySelector('#Adotar');
+
+		btnEnviar.addEventListener('click', function() {
+			alert('Processo de adoção concluído! Aguarde nosso retorno em seu e-mail.');
+		});
+	</script>
+    
+</body>
+</html>

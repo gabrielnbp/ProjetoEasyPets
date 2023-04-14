@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+    font-family: poppinsregular;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #840ec9;
+}
+section::before{    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #23242A;
+}
+.container{
+    position: relative;
+    min-width: 1000px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+}
+.container .infoContato{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #840EC9;   
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);     
+}
+.container .infoContato h2{
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;    
+}
+.container .infoContato ul.info{
+    position: relative;
+    margin: 20px 0;
+}
+.container .infoContato ul.info li{
+    position: relative;
+    list-style: none;
+    display: flex;    
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+.container .infoContato ul.info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+}
+.container .infoContato ul.info li span:nth-child(1) ion-icon{
+    max-width: 100%;
+    filter: invert(1);
+}
+.container .infoContato ul.info li span:nth-child(2){
+    color: #FFF;
+    margin-left: 10px;
+    font-weight: 300;    
+}
+.container .formContato{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 300px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff;    
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.container .formContato h2{
+    color: #370057;
+    font-size: 24px;
+    font-weight: 500;    
+}
+.container .formContato .caixaForm{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.container .formContato .caixaForm .caixaInput{
+    position: relative;
+    margin-bottom: 35px;    
+}
+.container .formContato .caixaForm .caixaInput.w50{
+    width: 47%;
+}
+.container .formContato .caixaForm .caixaInput.w100{
+    width: 100%; 
+}
+.container .formContato .caixaForm .caixaInput input,
+.container .formContato .caixaForm .caixaInput textarea{
+    width: 100%;
+    resize: none;  
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;  
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+.container .formContato .caixaForm .caixaInput textarea{
+    height: 120px;
+}
+.container .formContato .caixaForm .caixaInput span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.container .formContato .caixaForm .caixaInput input:focus ~ span,
+.container .formContato .caixaForm .caixaInput input:valid ~ span,
+.container .formContato .caixaForm .caixaInput textarea:focus ~ span,
+.container .formContato .caixaForm .caixaInput textarea:valid ~ span{
+    transform: translateY(-20px);    
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #840EC9;
+    font-weight: 500;
+}
+.container .formContato .caixaForm .caixaInput input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: #840EC9;  
+    color: #FFF; 
+    border: none; 
+    max-width: 150px;
+    padding: 12px;
+}
+.container .formContato .caixaForm .caixaInput input[type="submit"]:hover{
+    background: #AA37F1;
+}
+@media (max-width : 1200px){
+    .container{
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+    .container .infoContato{
+        top: 0;
+        height: 500px;
+        position: relative;
+        box-shadow: none;    
+    }
+    .container .formContato{
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0; 
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+    }
+}
+@media (max-width : 991px){
+    section{
+    background: #23242A;
+    }
+    section::before{
+        display: none;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container .formContato{
+        width: 100%;
+        height: auto;
+    }
+    .container .infoContato{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+    }
+}
+@media (max-width : 991px){
+    .container .formContato{
+        padding: 25px;
+    }
+    .container .infoContato{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container .formContato .caixaForm .caixaInput.w50{
+        width: 100%;
+    }
+}
